@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "club_papaya (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "club_papaya (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
