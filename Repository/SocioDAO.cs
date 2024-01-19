@@ -5,6 +5,7 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using club_papaya.Exceptions;
 using club_papaya.Models;
 using Microsoft.WindowsAppSDK.Runtime.Packages;
@@ -27,7 +28,7 @@ public class SocioDAO
                 "Livvie",
                 "Basler",
                "641256987",
-                "lbasler0@mail.com",
+                "lbasler0@club-nautico.com",
                "https://randomuser.me/api/portraits/women/75.jpg"
             ),
             new Socio
@@ -36,7 +37,7 @@ public class SocioDAO
                  "Nathanael",
                 "Aers",
                 "635789452",
-                "iaers0@mail.com",
+                "iaers0@club-nautico.com",
                 "https://randomuser.me/api/portraits/men/20.jpg"
             ),                  
             new Socio
@@ -45,7 +46,7 @@ public class SocioDAO
                  "Silvester",
                 "Tribe",
                 "965874523",
-                "asybbe2@mail.com",
+                "asybbe2@club-nautico.com",
                 "https://randomuser.me/api/portraits/men/15.jpg"
             ),                       
             new Socio
@@ -54,20 +55,51 @@ public class SocioDAO
                  "Anitra",
                 "Geary",
                 "623536987",
-                "ageary5@mail.com",
+                "ageary5@club-nautico.com",
                 "https://randomuser.me/api/portraits/women/5.jpg"
+            ),
+            new Socio
+            (
+                 "35789526A",
+                 "Levis",
+                "Strauss",
+                "956325968",
+                "levis@club-nautico.com",
+                "https://randomuser.me/api/portraits/men/5.jpg"
             )
         };
+        foreach (Socio s in Socios)
+        {
+            if (s.Dni.Equals("Y7643930D"))
+            {
+                s.AgregarBarco(new Barco(
+                    "Papayita",
+                    "1",
+                    "250.50"
+                ));
+                s.AgregarBarco(new Barco(
+                   "Papayita II",
+                   "2",
+                   "400"
+               ));
+            }
+
+            if (s.Dni.Equals("25636584A"))
+            {
+                s.AgregarBarco(new Barco(
+                    "Mango",
+                    "3",
+                    "380"
+                ));               
+            }
+        }
 
     }
     public static SocioDAO Instance
     {
         get
         {
-            if (instance == null)
-            {
-                instance = new SocioDAO();
-            }
+            instance ??= new SocioDAO();
             return instance;
         }
     }
@@ -119,5 +151,15 @@ public class SocioDAO
             return existeDni = true;
         }
         return existeDni;
+    }
+
+    public void RegistrarBarco(Socio socio, Barco barco)
+    {
+        Socio socioExistente = Socios.FirstOrDefault(s => s.Dni.Equals(socio.Dni));
+
+        if (socioExistente != null)
+        {
+            socioExistente.AgregarBarco(barco);
+        }
     }
 }

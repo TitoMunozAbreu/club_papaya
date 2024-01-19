@@ -33,6 +33,7 @@ public sealed partial class SocioDetail : Page
         InitializeComponent();
         GoBackButton.Loaded += GoBackButton_Loaded;
         SocioDAO = SocioDAO.Instance;
+    
 
     }
 
@@ -48,6 +49,17 @@ public sealed partial class SocioDetail : Page
 
         // Store the item to be used in binding to UI
         Socio = e.Parameter as Socio;
+
+        if (Socio.Barcos.LongCount() > 0)
+        {
+            lstBarcos.ItemsSource = Socio.Barcos;
+        }
+        else
+        {
+            tituloBarco.Text = "No barcos registrados";
+            tituloBarco.Style = (Style)Application.Current.Resources["BodyStrongTextBlockStyle"];
+        }
+
 
         ConnectedAnimation imageAnimation = ConnectedAnimationService.GetForCurrentView().GetAnimation("ForwardConnectedAnimation");
         if (imageAnimation != null)

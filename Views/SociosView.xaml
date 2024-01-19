@@ -43,22 +43,22 @@
                             Text="{x:Bind LastName}" />
                         <StackPanel Orientation="Horizontal">
                             <TextBlock
-                                FontWeight="Bold"
-                                Style="{ThemeResource CaptionTextBlockStyle}"
+                                FontWeight="Light"
+                                Style="{ThemeResource BodyStrongTextBlockStyle}"
                                 Text="Email: " />
                             <TextBlock
                                 Margin="5,0,0,0"
-                                Style="{ThemeResource CaptionTextBlockStyle}"
+                                Style="{ThemeResource BodyStrongTextBlockStyle}"
                                 Text="{x:Bind Email}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock
-                                FontWeight="Bold"
-                                Style="{ThemeResource CaptionTextBlockStyle}"
+                                FontWeight="Light"
+                                Style="{ThemeResource BodyStrongTextBlockStyle}"
                                 Text="Mobile: " />
                             <TextBlock
                                 Margin="5,0,0,0"
-                                Style="{ThemeResource CaptionTextBlockStyle}"
+                                Style="{ThemeResource BodyStrongTextBlockStyle}"
                                 Text="{x:Bind Mobile}" />
                         </StackPanel>
                     </StackPanel>

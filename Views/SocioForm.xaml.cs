@@ -290,7 +290,7 @@ public SocioForm()
             errorMobile.Text = "Ingresar un móvil valido";
             IsMobileValid = false;
         }
-        else if (Mobile.Length != 9)
+        else if (Mobile.Length < 9 || Mobile.Length > 9)
         {
             errorMobile.Visibility = Visibility.Visible;
             errorMobile.Text = "Ingresar móvil de 9 digitos";

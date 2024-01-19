@@ -13,6 +13,7 @@ public class Socio
     public string Mobile   { get; set; }
     public string Email { get; set; }
     public string PhotoUrl { get; set; } 
+    public List<Barco> Barcos { get; set; }
 
 
     public Socio(
@@ -29,5 +30,16 @@ public class Socio
         Mobile = mobile;
         Email = email;
         PhotoUrl = photoUrl;
+        Barcos = new List<Barco>();
+    }
+
+    public void AgregarBarco(Barco barco)
+    {
+        Barcos.Add(barco);
+    }
+
+    public void EliminarBarco(Barco barco)
+    {
+        Barcos.Remove(barco);
     }
 }

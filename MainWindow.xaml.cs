@@ -33,6 +33,9 @@ public sealed partial class MainWindow : Window
                 break; 
             case "registrarSocio":
                 ContentFrame.Navigate(typeof(SocioForm), null, new DrillInNavigationTransitionInfo());
+                break;         
+            case "registrarBarco":
+                ContentFrame.Navigate(typeof(BarcoForm), null, new DrillInNavigationTransitionInfo());
                 break;
         }
     }

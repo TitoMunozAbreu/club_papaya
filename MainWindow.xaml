@@ -37,6 +37,10 @@
                     Content="Registrar Socio"
                     Icon="Admin"
                     Tag="registrarSocio" />
+                <NavigationViewItem
+                    Content="Registrar Barco"
+                    Icon="Admin"
+                    Tag="registrarBarco" />
             </NavigationView.MenuItems>
             <Frame x:Name="ContentFrame">
                 <Frame.ContentTransitions>
