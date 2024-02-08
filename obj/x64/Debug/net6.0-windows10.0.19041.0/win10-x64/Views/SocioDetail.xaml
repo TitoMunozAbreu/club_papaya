@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page x:ConnectionId='1'
+    x:Class="club_papaya.Views.SocioDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:club_papaya.Views"
+    xmlns:local1="using:club_papaya.Models"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource PaginaBackgroundColor}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:ConnectionId='2'
+            x:Name="headerBackground"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Background="{ThemeResource PaginaBackgroundColor}">
+            <Button x:ConnectionId='18'
+                x:Name="GoBackButton"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                                        >
+                <FontIcon Glyph="&#xE72B;" />
+            </Button>
+            <!--  Botón de editar  -->
+            <Button x:ConnectionId='19'
+                x:Name="EditButton"
+                Margin="0,10,70,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="DarkBlue"
+                                       >
+                <FontIcon Glyph="&#xE70F;" />
+            </Button>
+            <!--  Botón de eliminar  -->
+            <Button x:ConnectionId='20'
+                x:Name="DeleteButton"
+                Margin="0,10,10,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="DarkRed"
+                                         >
+                <FontIcon Glyph="&#xE74D;" />
+            </Button>
+        </Grid>
+
+        <Grid x:ConnectionId='3' x:Name="headerContent" Margin="20,52,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image x:ConnectionId='4'
+                x:Name="detailedImage"
+                MaxHeight="200"
+                VerticalAlignment="Top"
+                                                
+                Stretch="Uniform" />
+
+            <StackPanel x:ConnectionId='5'
+                x:Name="coordinatedPanel"
+                Grid.Column="1"
+                Margin="20,0"
+                VerticalAlignment="Top">
+                <TextBlock x:ConnectionId='6'
+                    Margin="0,0,0,10"
+                    Foreground="{StaticResource PaginaTitulo}"
+                    Style="{ThemeResource SubheaderTextBlockStyle}"
+                                                    />
+                <TextBlock x:ConnectionId='7'
+                    Margin="0,0,0,10"
+                    Foreground="{StaticResource PaginaTitulo}"
+                    Style="{ThemeResource SubheaderTextBlockStyle}"
+                                                   />
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        FontWeight="Light"
+                        Foreground="{StaticResource TextColor}"
+                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                        Text="Dni: " />
+                    <TextBlock x:ConnectionId='17'
+                        Margin="5,0,0,0"
+                        Foreground="{StaticResource TextColor}"
+                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                                  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        FontWeight="Light"
+                        Foreground="{StaticResource TextColor}"
+                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                        Text="Email: " />
+                    <TextBlock x:ConnectionId='16'
+                        Margin="5,0,0,0"
+                        Foreground="{StaticResource TextColor}"
+                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                                    />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        FontWeight="Light"
+                        Foreground="{StaticResource TextColor}"
+                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                        Text="Mobile: " />
+                    <TextBlock x:ConnectionId='15'
+                        Margin="5,0,0,0"
+                        Foreground="{StaticResource TextColor}"
+                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                                     />
+                </StackPanel>
+                <!--  titulo barco  -->
+                <TextBlock x:ConnectionId='8'
+                    x:Name="tituloBarco"
+                    Margin="20,10,10,0"
+                    Style="{ThemeResource SubheaderTextBlockStyle}"
+                    Text="Barcos" />
+                <ListView x:ConnectionId='9'
+                    x:Name="lstBarcos"
+                    Grid.Row="1"
+                    Margin="20,0,10,20"
+                                                       
+                    SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate                          >
+                            <StackPanel x:ConnectionId='11' Margin="0,0,0,10">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        FontWeight="Light"
+                                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                        Text="Nombre: " />
+                                    <TextBlock x:ConnectionId='14'
+                                        Margin="5,0,0,0"
+                                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                                             />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        FontWeight="Light"
+                                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                        Text="Numero amarre: " />
+                                    <TextBlock x:ConnectionId='13'
+                                        Margin="5,0,0,0"
+                                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                                                      />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        FontWeight="Light"
+                                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                        Text="Cuota Pago: € " />
+                                    <TextBlock x:ConnectionId='12'
+                                        Margin="5,0,0,0"
+                                        Style="{ThemeResource BodyStrongTextBlockStyle}"
+                                                                   />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Page>
+

@@ -7,7 +7,7 @@
     xmlns:local="using:club_papaya.Views"
     xmlns:local1="using:club_papaya.Models"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Background="{ThemeResource PaginaBackgroundColor}"
     mc:Ignorable="d">
 
     <Grid>
@@ -20,7 +20,7 @@
             x:Name="headerBackground"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"
-            Background="{ThemeResource SystemControlAcrylicElementBrush}">
+            Background="{ThemeResource PaginaBackgroundColor}">
             <Button
                 x:Name="GoBackButton"
                 Margin="10,10,10,0"
@@ -35,7 +35,7 @@
                 Margin="0,10,70,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
-                Background="Blue"
+                Background="DarkBlue"
                 Click="btn_EditarSocio">
                 <FontIcon Glyph="&#xE70F;" />
             </Button>
@@ -45,7 +45,7 @@
                 Margin="0,10,10,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
-                Background="Red"
+                Background="DarkRed"
                 Click="btn_EliminarSocio">
                 <FontIcon Glyph="&#xE74D;" />
             </Button>
@@ -71,39 +71,47 @@
                 VerticalAlignment="Top">
                 <TextBlock
                     Margin="0,0,0,10"
+                    Foreground="{StaticResource PaginaTitulo}"
                     Style="{ThemeResource SubheaderTextBlockStyle}"
                     Text="{x:Bind Socio.FirstName}" />
                 <TextBlock
                     Margin="0,0,0,10"
+                    Foreground="{StaticResource PaginaTitulo}"
                     Style="{ThemeResource SubheaderTextBlockStyle}"
                     Text="{x:Bind Socio.LastName}" />
                 <StackPanel Orientation="Horizontal">
                     <TextBlock
                         FontWeight="Light"
+                        Foreground="{StaticResource TextColor}"
                         Style="{ThemeResource BodyStrongTextBlockStyle}"
                         Text="Dni: " />
                     <TextBlock
                         Margin="5,0,0,0"
+                        Foreground="{StaticResource TextColor}"
                         Style="{ThemeResource BodyStrongTextBlockStyle}"
                         Text="{x:Bind Socio.Dni}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock
                         FontWeight="Light"
+                        Foreground="{StaticResource TextColor}"
                         Style="{ThemeResource BodyStrongTextBlockStyle}"
                         Text="Email: " />
                     <TextBlock
                         Margin="5,0,0,0"
+                        Foreground="{StaticResource TextColor}"
                         Style="{ThemeResource BodyStrongTextBlockStyle}"
                         Text="{x:Bind Socio.Email}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock
                         FontWeight="Light"
+                        Foreground="{StaticResource TextColor}"
                         Style="{ThemeResource BodyStrongTextBlockStyle}"
                         Text="Mobile: " />
                     <TextBlock
                         Margin="5,0,0,0"
+                        Foreground="{StaticResource TextColor}"
                         Style="{ThemeResource BodyStrongTextBlockStyle}"
                         Text="{x:Bind Socio.Mobile}" />
                 </StackPanel>

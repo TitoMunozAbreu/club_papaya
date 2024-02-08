@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Window
+    x:Class="club_papaya.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:club_papaya"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource PanelPrincipal}">
+
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <!--  Texto del título  -->
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="35"
+                    FontWeight="Bold"
+                    Foreground="{StaticResource NavegacionTextColor}"
+                    Text="Club Nautico" />
+                <!--  Texto del título  -->
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="40"
+                    FontWeight="Bold"
+                    Foreground="{StaticResource NavegacionTextColor}"
+                    Text="Gestión Socios" />
+            </StackPanel>
+        </Grid>
+        <NavigationView x:ConnectionId='2'
+            x:Name="nvSample"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+                                                  >
+            <NavigationView.PaneHeader>
+                <StackPanel Margin="0,0,0,20" Orientation="Horizontal">
+                    <Image
+                        Width="48"
+                        Height="48"
+                        Margin="10,0,0,0"
+                        Source="https://previews.123rf.com/images/siberica/siberica1601/siberica160100071/51309870-%C3%A9tiquette-nautique-yacht-ic%C3%B4ne-peut-%C3%AAtre-utilis%C3%A9-pour-un-logo-de-club-de-yacht.jpg" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Foreground="{StaticResource NavegacionTextColor}"
+                        Text=" CLUB NAUTICO" />
+                </StackPanel>
+            </NavigationView.PaneHeader>
+            <NavigationView.MenuItems>
+                <NavigationViewItem
+                    Content="Listado de Socios"
+                    Foreground="{StaticResource NavegacionTextColor}"
+                    Icon="ContactInfo"
+                    Tag="listadoSocio" />
+                <NavigationViewItem
+                    Content="Registrar Socio"
+                    Foreground="{StaticResource NavegacionTextColor}"
+                    Icon="Admin"
+                    Tag="registrarSocio" />
+                <NavigationViewItem
+                    Content="Registrar Barco"
+                    Foreground="{StaticResource NavegacionTextColor}"
+                    Icon="Admin"
+                    Tag="registrarBarco" />
+                <NavigationViewItem
+                    Margin="0,250,0,0"
+                    Content="Ayuda"
+                    Foreground="{StaticResource NavegacionTextColor}"
+                    Icon="Help"
+                    Tag="ayuda" />
+            </NavigationView.MenuItems>
+            <Frame x:ConnectionId='3' x:Name="ContentFrame">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition />
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </NavigationView>
+    </Grid>
+</Window>
+

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page x:ConnectionId='1'
+    x:Class="club_papaya.Views.BarcoForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:club_papaya.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{StaticResource PaginaBackgroundColor}"
+    mc:Ignorable="d">
+    <Grid>
+        <Image
+            Height="80"
+            Margin="0,30,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Source="C:\Users\34618\Workspace_C#\club_papaya\Assets\boat.png" />
+
+        <StackPanel
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <!--  Titulo  -->
+            <TextBlock x:ConnectionId='2'
+                x:Name="titulo"
+                Grid.Row="0"
+                Margin="0,0,0,10"
+                Foreground="{StaticResource PaginaTitulo}"
+                Style="{ThemeResource HeaderTextBlockStyle}"
+                Text="Registrar Barco" />
+
+            <!--  Validacion Barco  -->
+            <InfoBar x:ConnectionId='3'
+                x:Name="alert"
+                Margin="0,0,0,10"
+                IsOpen="False" />
+
+            <!--  Name  -->
+            <TextBox x:ConnectionId='4'
+                x:Name="txtName"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                                 
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Nombre"
+                                     />
+            <!--  Validacion Name  -->
+            <TextBlock x:ConnectionId='5'
+                x:Name="errorName"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  MooringNumber  -->
+            <TextBox x:ConnectionId='6'
+                x:Name="txtMooringNumber"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                                          
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Numero Amarre"
+                                              />
+            <!--  Validacion MooringNumber  -->
+            <TextBlock x:ConnectionId='7'
+                x:Name="errorMooringNumber"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  PaymentFee  -->
+            <TextBox x:ConnectionId='8'
+                x:Name="txtPaymentFee"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                                       
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Couta pago"
+                                           />
+            <!--  Validacion PaymentFee  -->
+            <TextBlock x:ConnectionId='9'
+                x:Name="errorPaymentFee"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  Lista de Socios  -->
+            <ComboBox x:ConnectionId='10'
+                x:Name="cmbSocios"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                DisplayMemberPath="FirstName"
+                Foreground="{StaticResource TextColor}"
+                                                          
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Seleccione un Socio"
+                                                              />
+            <!--  Validacion Socio  -->
+            <TextBlock x:ConnectionId='11'
+                x:Name="errorSocio"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  Boton guardar  -->
+            <Button x:ConnectionId='12'
+                x:Name="btnGuardar"
+                Grid.Row="11"
+                Background="Green"
+                                          
+                Content="Guardar"
+                Foreground="{StaticResource TextColor}"
+                IsEnabled="False" />
+        </StackPanel>
+    </Grid>
+</Page>
+

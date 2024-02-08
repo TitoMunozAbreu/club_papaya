@@ -6,119 +6,144 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:club_papaya.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Background="{ThemeResource PaginaBackgroundColor}"
     mc:Ignorable="d">
 
-    <StackPanel
-        Margin="10"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center">
-        <Button
-            x:Name="GoBackButton"
-            Margin="10,10,10,0"
-            HorizontalAlignment="Left"
+    <Grid>
+        <Image
+            Height="80"
+            Margin="0,30,0,0"
+            HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Click="BackButton_Click">
-            <FontIcon Glyph="&#xE72B;" />
-        </Button>
-        <!--  Titulo  -->
-        <TextBlock
-            x:Name="titulo"
-            Grid.Row="0"
-            Margin="0,0,0,10"
-            Style="{ThemeResource HeaderTextBlockStyle}"
-            Text="Registrar Socio" />
+            Source="C:\Users\34618\Workspace_C#\club_papaya\Assets\user.png" />
 
-        <!--  validacion Socio  -->
-        <InfoBar
-            x:Name="alert"
-            Margin="0,0,0,10"
-            IsOpen="False" />
+        <StackPanel
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Button
+                x:Name="GoBackButton"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="BackButton_Click">
+                <FontIcon Glyph="&#xE72B;" />
+            </Button>
 
-        <!--  Dni  -->
-        <TextBox
-            x:Name="txtDni"
-            Margin="0,0,0,10"
-            GotFocus="GfDni"
-            PlaceholderText="Dni / Nie"
-            TextChanged="TcDni" />
-        <!--  validacion nombre  -->
-        <TextBlock
-            x:Name="errorDni"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  Titulo  -->
+            <TextBlock
+                x:Name="titulo"
+                Grid.Row="0"
+                Margin="0,0,0,10"
+                Foreground="{StaticResource PaginaTitulo}"
+                Style="{ThemeResource HeaderTextBlockStyle}"
+                Text="Registrar Socio" />
 
-        <!--  Nombre  -->
-        <TextBox
-            x:Name="txtFirstName"
-            Margin="0,0,0,10"
-            GotFocus="GfFirstname"
-            PlaceholderText="Nombre"
-            TextChanged="TcFirstname" />
-        <!--  validacion nombre  -->
-        <TextBlock
-            x:Name="errorFirstName"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  validacion Socio  -->
+            <InfoBar
+                x:Name="alert"
+                Margin="0,0,0,10"
+                IsOpen="False" />
 
-        <!--  Apellido  -->
-        <TextBox
-            x:Name="txtLastName"
-            Margin="0,0,0,10"
-            GotFocus="GfLastName"
-            PlaceholderText="Apellido"
-            TextChanged="TcLastName" />
-        <!--  validacion apellido  -->
-        <TextBlock
-            x:Name="errorLastName"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  Dni  -->
+            <TextBox
+                x:Name="txtDni"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="GfDni"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Dni / Nie"
+                TextChanged="TcDni" />
+            <!--  validacion nombre  -->
+            <TextBlock
+                x:Name="errorDni"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
 
-        <!--  Email  -->
-        <TextBox
-            x:Name="txtEmail"
-            Margin="0,0,0,10"
-            GotFocus="GfEmail"
-            PlaceholderText="Email"
-            TextChanged="TcEmail" />
-        <!--  validacion email  -->
-        <TextBlock
-            x:Name="errorEmail"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  Nombre  -->
+            <TextBox
+                x:Name="txtFirstName"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="GfFirstname"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Nombre"
+                TextChanged="TcFirstname" />
+            <!--  validacion nombre  -->
+            <TextBlock
+                x:Name="errorFirstName"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
 
-        <!--  Movil  -->
-        <TextBox
-            x:Name="txtMobile"
-            Margin="0,0,0,10"
-            GotFocus="GfMobile"
-            PlaceholderText="Movil"
-            TextChanged="TcMobile" />
-        <!--  validacion movil  -->
-        <TextBlock
-            x:Name="errorMobile"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  Apellido  -->
+            <TextBox
+                x:Name="txtLastName"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="GfLastName"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Apellido"
+                TextChanged="TcLastName" />
+            <!--  validacion apellido  -->
+            <TextBlock
+                x:Name="errorLastName"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
 
-        <!--  Boton guardar  -->
-        <Button
-            x:Name="btnGuardar"
-            Grid.Row="11"
-            Background="Green"
-            Click="btn_RegistrarSocio"
-            Content="Guardar"
-            Foreground="White"
-            IsEnabled="False" />
-    </StackPanel>
+            <!--  Email  -->
+            <TextBox
+                x:Name="txtEmail"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="GfEmail"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Email"
+                TextChanged="TcEmail" />
+            <!--  validacion email  -->
+            <TextBlock
+                x:Name="errorEmail"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
 
+            <!--  Movil  -->
+            <TextBox
+                x:Name="txtMobile"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="GfMobile"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Movil"
+                TextChanged="TcMobile" />
+            <!--  validacion movil  -->
+            <TextBlock
+                x:Name="errorMobile"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  Boton guardar  -->
+            <Button
+                x:Name="btnGuardar"
+                Grid.Row="11"
+                Background="Green"
+                Click="btn_RegistrarSocio"
+                Content="Guardar"
+                Foreground="White"
+                IsEnabled="False" />
+        </StackPanel>
+    </Grid>
 </Page>

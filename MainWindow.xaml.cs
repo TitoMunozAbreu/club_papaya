@@ -1,10 +1,14 @@
+using System;
 using club_papaya.Views;
 using Microsoft.UI;
+using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
+using Windows.ApplicationModel;
 using Windows.ApplicationModel.Core;
 using Windows.UI.ViewManagement;
+using Windows.UI.WebUI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -18,6 +22,9 @@ public sealed partial class MainWindow : Window
     public MainWindow()
     {
         this.InitializeComponent();
+        this.Title = "Papaya";
+        AppWindow.SetIcon("C:\\Users\\34618\\Workspace_C#\\club_papaya\\Assets\\papaya.ico");
+
     }
 
     private void OnNavigationItemSelected(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -36,6 +43,9 @@ public sealed partial class MainWindow : Window
                 break;         
             case "registrarBarco":
                 ContentFrame.Navigate(typeof(BarcoForm), null, new DrillInNavigationTransitionInfo());
+                break;           
+            case "ayuda":
+                ContentFrame.Navigate(typeof(AyudaView), null, new DrillInNavigationTransitionInfo());
                 break;
         }
     }

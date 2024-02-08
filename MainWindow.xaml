@@ -9,8 +9,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Grid Background="{StaticResource PanelPrincipal}">
 
-    <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Orientation="Vertical">
                 <!--  Texto del título  -->
@@ -18,29 +18,57 @@
                     VerticalAlignment="Center"
                     FontSize="35"
                     FontWeight="Bold"
+                    Foreground="{StaticResource NavegacionTextColor}"
                     Text="Club Nautico" />
                 <!--  Texto del título  -->
                 <TextBlock
                     VerticalAlignment="Center"
                     FontSize="40"
                     FontWeight="Bold"
+                    Foreground="{StaticResource NavegacionTextColor}"
                     Text="Gestión Socios" />
             </StackPanel>
         </Grid>
-        <NavigationView x:Name="nvSample" ItemInvoked="OnNavigationItemSelected">
+        <NavigationView
+            x:Name="nvSample"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+            ItemInvoked="OnNavigationItemSelected">
+            <NavigationView.PaneHeader>
+                <StackPanel Margin="0,0,0,20" Orientation="Horizontal">
+                    <Image
+                        Width="48"
+                        Height="48"
+                        Margin="10,0,0,0"
+                        Source="https://previews.123rf.com/images/siberica/siberica1601/siberica160100071/51309870-%C3%A9tiquette-nautique-yacht-ic%C3%B4ne-peut-%C3%AAtre-utilis%C3%A9-pour-un-logo-de-club-de-yacht.jpg" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Foreground="{StaticResource NavegacionTextColor}"
+                        Text=" CLUB NAUTICO" />
+                </StackPanel>
+            </NavigationView.PaneHeader>
             <NavigationView.MenuItems>
                 <NavigationViewItem
                     Content="Listado de Socios"
+                    Foreground="{StaticResource NavegacionTextColor}"
                     Icon="ContactInfo"
                     Tag="listadoSocio" />
                 <NavigationViewItem
                     Content="Registrar Socio"
+                    Foreground="{StaticResource NavegacionTextColor}"
                     Icon="Admin"
                     Tag="registrarSocio" />
                 <NavigationViewItem
                     Content="Registrar Barco"
+                    Foreground="{StaticResource NavegacionTextColor}"
                     Icon="Admin"
                     Tag="registrarBarco" />
+                <NavigationViewItem
+                    Margin="0,250,0,0"
+                    Content="Ayuda"
+                    Foreground="{StaticResource NavegacionTextColor}"
+                    Icon="Help"
+                    Tag="ayuda" />
             </NavigationView.MenuItems>
             <Frame x:Name="ContentFrame">
                 <Frame.ContentTransitions>

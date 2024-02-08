@@ -12,6 +12,10 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\AyudaView.xaml" />
     <None Remove="Views\BarcoForm.xaml" />
     <None Remove="Views\SocioDetail.xaml" />
     <None Remove="Views\SocioForm.xaml" />
@@ -42,6 +46,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\AyudaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\BarcoForm.xaml">

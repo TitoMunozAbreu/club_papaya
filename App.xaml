@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Application
     x:Class="club_papaya.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -6,11 +6,18 @@
     xmlns:local="using:club_papaya">
     <Application.Resources>
         <ResourceDictionary>
+            <SolidColorBrush x:Key="PanelPrincipal" Color="AntiqueWhite" />
+            <SolidColorBrush x:Key="PaginaBackgroundColor" Color="DarkSlateGray" />
+            <SolidColorBrush x:Key="NavegacionTextColor" Color="DarkSlateGray" />
+            <SolidColorBrush x:Key="PaginaTitulo" Color="AntiqueWhite" />
+            <SolidColorBrush x:Key="TextColor" Color="WhiteSmoke" />
+            <SolidColorBrush x:Key="InputBoxColor" Color="DarkSlateGray" />
+            <SolidColorBrush x:Key="PlaceHolderColor" Color="AntiqueWhite" />
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-                <!-- Other merged dictionaries here -->
+                <!--  Other merged dictionaries here  -->
             </ResourceDictionary.MergedDictionaries>
-            <!-- Other app resources here -->
+            <!--  Other app resources here  -->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -6,97 +6,118 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:club_papaya.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Background="{StaticResource PaginaBackgroundColor}"
     mc:Ignorable="d">
+    <Grid>
+        <Image
+            Height="80"
+            Margin="0,30,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Source="C:\Users\34618\Workspace_C#\club_papaya\Assets\boat.png" />
 
-    <StackPanel
-        Margin="10"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center">
+        <StackPanel
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
 
-        <!--  Titulo  -->
-        <TextBlock
-            x:Name="titulo"
-            Grid.Row="0"
-            Margin="0,0,0,10"
-            Style="{ThemeResource HeaderTextBlockStyle}"
-            Text="Registrar Barco" />
+            <!--  Titulo  -->
+            <TextBlock
+                x:Name="titulo"
+                Grid.Row="0"
+                Margin="0,0,0,10"
+                Foreground="{StaticResource PaginaTitulo}"
+                Style="{ThemeResource HeaderTextBlockStyle}"
+                Text="Registrar Barco" />
 
-        <!--  Validacion Barco  -->
-        <InfoBar
-            x:Name="alert"
-            Margin="0,0,0,10"
-            IsOpen="False" />
+            <!--  Validacion Barco  -->
+            <InfoBar
+                x:Name="alert"
+                Margin="0,0,0,10"
+                IsOpen="False" />
 
-        <!--  Name  -->
-        <TextBox
-            x:Name="txtName"
-            Margin="0,0,0,10"
-            GotFocus="GfName"
-            PlaceholderText="Nombre"
-            TextChanged="TcName" />
-        <!--  Validacion Name  -->
-        <TextBlock
-            x:Name="errorName"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  Name  -->
+            <TextBox
+                x:Name="txtName"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="GfName"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Nombre"
+                TextChanged="TcName" />
+            <!--  Validacion Name  -->
+            <TextBlock
+                x:Name="errorName"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
 
-        <!--  MooringNumber  -->
-        <TextBox
-            x:Name="txtMooringNumber"
-            Margin="0,0,0,10"
-            GotFocus="GfMooringNumber"
-            PlaceholderText="Numero Amarre"
-            TextChanged="TcMooringNumber" />
-        <!--  Validacion MooringNumber  -->
-        <TextBlock
-            x:Name="errorMooringNumber"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  MooringNumber  -->
+            <TextBox
+                x:Name="txtMooringNumber"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="GfMooringNumber"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Numero Amarre"
+                TextChanged="TcMooringNumber" />
+            <!--  Validacion MooringNumber  -->
+            <TextBlock
+                x:Name="errorMooringNumber"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
 
-        <!--  PaymentFee  -->
-        <TextBox
-            x:Name="txtPaymentFee"
-            Margin="0,0,0,10"
-            GotFocus="GfPaymentFee"
-            PlaceholderText="Couta pago"
-            TextChanged="TcPaymentFee" />
-        <!--  Validacion PaymentFee  -->
-        <TextBlock
-            x:Name="errorPaymentFee"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  PaymentFee  -->
+            <TextBox
+                x:Name="txtPaymentFee"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="GfPaymentFee"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Couta pago"
+                TextChanged="TcPaymentFee" />
+            <!--  Validacion PaymentFee  -->
+            <TextBlock
+                x:Name="errorPaymentFee"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
 
-        <!--  Lista de Socios  -->
-        <ComboBox
-            x:Name="cmbSocios"
-            Margin="0,0,0,10"
-            DisplayMemberPath="FirstName"
-            ItemsSource="{x:Bind Socios, Mode=OneWay}"
-            PlaceholderText="Seleccione un Socio"
-            SelectionChanged="CmbSocios_SelectionChanged" />
-        <!--  Validacion Socio  -->
-        <TextBlock
-            x:Name="errorSocio"
-            Margin="0,0,0,10"
-            Foreground="Red"
-            Style="{ThemeResource CaptionTextBlockStyle}"
-            Visibility="Collapsed" />
+            <!--  Lista de Socios  -->
+            <ComboBox
+                x:Name="cmbSocios"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                DisplayMemberPath="FirstName"
+                Foreground="{StaticResource TextColor}"
+                ItemsSource="{x:Bind Socios, Mode=OneWay}"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Seleccione un Socio"
+                SelectionChanged="CmbSocios_SelectionChanged" />
+            <!--  Validacion Socio  -->
+            <TextBlock
+                x:Name="errorSocio"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
 
-        <!--  Boton guardar  -->
-        <Button
-            x:Name="btnGuardar"
-            Grid.Row="11"
-            Background="Green"
-            Click="btn_RegistrarBarco"
-            Content="Guardar"
-            Foreground="White"
-            IsEnabled="False" />
-    </StackPanel>
+            <!--  Boton guardar  -->
+            <Button
+                x:Name="btnGuardar"
+                Grid.Row="11"
+                Background="Green"
+                Click="btn_RegistrarBarco"
+                Content="Guardar"
+                Foreground="{StaticResource TextColor}"
+                IsEnabled="False" />
+        </StackPanel>
+    </Grid>
 </Page>

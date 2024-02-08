@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:club_papaya.Models"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Background="{StaticResource PaginaBackgroundColor}"
     mc:Ignorable="d">
 
     <ListView
@@ -28,36 +28,42 @@
                         x:Name="connectedElement"
                         MaxHeight="100"
                         Source="{x:Bind PhotoUrl}"
-                        Stretch="Fill" />
+                        Stretch="Uniform" />
 
                     <StackPanel Grid.Column="1" Margin="12,0,0,0">
                         <TextBlock
                             Margin="0,0,0,6"
                             HorizontalAlignment="Left"
+                            Foreground="{StaticResource PaginaTitulo}"
                             Style="{ThemeResource SubtitleTextBlockStyle}"
                             Text="{x:Bind FirstName}" />
                         <TextBlock
                             Margin="0,0,0,6"
                             HorizontalAlignment="Left"
+                            Foreground="{StaticResource PaginaTitulo}"
                             Style="{ThemeResource SubtitleTextBlockStyle}"
                             Text="{x:Bind LastName}" />
                         <StackPanel Orientation="Horizontal">
                             <TextBlock
                                 FontWeight="Light"
+                                Foreground="{StaticResource TextColor}"
                                 Style="{ThemeResource BodyStrongTextBlockStyle}"
                                 Text="Email: " />
                             <TextBlock
                                 Margin="5,0,0,0"
+                                Foreground="{StaticResource TextColor}"
                                 Style="{ThemeResource BodyStrongTextBlockStyle}"
                                 Text="{x:Bind Email}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock
                                 FontWeight="Light"
+                                Foreground="{StaticResource TextColor}"
                                 Style="{ThemeResource BodyStrongTextBlockStyle}"
                                 Text="Mobile: " />
                             <TextBlock
                                 Margin="5,0,0,0"
+                                Foreground="{StaticResource TextColor}"
                                 Style="{ThemeResource BodyStrongTextBlockStyle}"
                                 Text="{x:Bind Mobile}" />
                         </StackPanel>
